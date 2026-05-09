@@ -1,50 +1,59 @@
-# 🚀 Desafio Técnico: API de Foco e Produtividade
+# 🚀 Log de Performance – API de Foco e Produtividade
+Esse projeto nasceu de um desafio técnico que eu topei fazer. A ideia era simples: montar uma API que ajudasse a registrar sessões de foco e produtividade, e no final dar um diagnóstico inteligente de como foi o período de trabalho.
 
-O objetivo deste teste é criar o backend de um **"Log de Performance"**. Em vez de apenas registrar tarefas, queremos entender o **estado de fluxo** do desenvolvedor ou estudante durante suas atividades.
+Usei FastAPI com Uvicorn porque já curto essa stack, é rápida e prática. Além disso, dei uma brincada e fiz um frontend retro em HTML + TailwindCSS, só pra deixar mais divertido e com aquela vibe nostálgica.
 
-## 📅 Regras de Entrega
+Pra ser sincera, não achei tão complicado — já tinha feito algo parecido quando comecei a estudar Python, então foi mais questão de organizar melhor e caprichar nos detalhes.
 
-* Prazo: O projeto deve ser entregue até a próxima segunda-feira.
-* Uso de IA: O uso de ferramentas de Inteligência Artificial (ChatGPT, GitHub Copilot, etc.) é permitido.
-* Transparência: Caso utilize IA, você deve commitar os artefatos gerados junto ao repositório. Queremos entender como você utiliza essas ferramentas para acelerar seu fluxo de trabalho.
-* Faça o **fork desse projeto** e me avise quando terminar o [wouerner](https://www.linkedin.com/in/wouerner/) no linkedin. (necessario para pode acompanhar pelo github quem participou)
+## 🛠 O que usei
+- Python 3.x
 
-## 📝 O Contexto
-Muitas vezes trabalhamos muito, mas produzimos pouco. Você deve construir uma API simples que ajude o usuário a registrar seu nível de produtividade e, ao final, entregue um **diagnóstico inteligente** de como foi o seu período de trabalho.
+- FastAPI
 
-## 🛠 Requisitos Técnicos
-*   **Linguagem:** Python 3.x.
-*   **Framework:** À sua escolha (FastAPI, Flask, Django, etc).
-*   **Armazenamento:** Pode ser em memória (dicionários/listas) ou SQLite para simplicidade.
-*   **Diferencial:** Código limpo, bem comentado e presença de um `README.md` explicando como rodar o projeto.
+- Uvicorn
 
----
+- SQLite (bem simples, só pra guardar os registros)
 
-## 🛣 Os Endpoints
+- HTML + TailwindCSS (frontend com estilo retrô)
 
-### 1. `POST /registro-foco`
-O usuário deve enviar os dados de um bloco de trabalho recém-encerrado.
+## 🚀 Como rodar
+Clona o repositório:
+```
+git clone https://github.com/seu-usuario/log-performance.git
+cd log-performance
+```
+#
+Cria o ambiente virtual:
+```
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+```
+#
+Instala as dependências:
+```
+pip install -r dependencies.txt
+```
+#
+Sobe o servidor:
+```
+uvicorn main:app --reload
+```
+#
+Pronto, o servidor vai estar rodando em:
+```
+http://127.0.0.1:8000
+```
+#
+## 🎨 Frontend Retro
+Além da API, fiz um frontend simples em HTML + TailwindCSS com aquele jeitão retrô. Dá pra registrar sessões e ver o diagnóstico direto na tela.
 
-**Campos obrigatórios:**
-*   `nivel_foco`: Um valor inteiro de **1 a 5** (onde 1 é "muito distraído" e 5 é "estado de flow").
-*   `tempo_minutos`: Um inteiro representando quanto tempo durou a sessão.
-*   `comentario`: Uma string descrevendo o que foi feito ou o que causou distração.
+### 📌 Observações
+Esse projeto foi parte de um desafio técnico.
 
-> **💡 Dica de Criatividade:** Sinta-se à vontade para adicionar campos extras, como `categoria` (coding, reunião, estudo), `data` ou `tags`.
+> [!NOTE]
+> 📌 Esse projeto foi parte de um desafio técnico.
 
-### 2. `GET /diagnostico-produtividade`
-Este endpoint deve retornar um resumo inteligente baseado em todos os registros salvos.
+Usei IA (Copilot) em alguns momentos pra acelerar a escrita de código FRONTEND e documentação.
 
-**O que deve retornar (JSON):**
-*   **Média do nível de foco:** A média aritmética de todos os registros.
-*   **Tempo total focado:** A soma de todos os minutos registrados.
-*   **Lógica Criativa (Diferencial):** Uma "mensagem de feedback" automática baseada nos dados analisados.
-    *   *Exemplo:* Se a média de foco for `< 3`, sugerir "Pausas mais longas e menos notificações". Se for `> 4`, "Você está em uma maratona produtiva de alto nível!".
-
----
-
-## 📊 O que será avaliado
-1.  **Organização do Código:** Estrutura de pastas e legibilidade.
-2.  **Manipulação de Dados:** Como você lida com tipos, cálculos e persistência.
-3.  **Tratamento de Erros:** Respostas adequadas para entradas inválidas (ex: nível de foco fora do range 1-5).
-4.  **Criatividade:** Pequenos detalhes que tornam a API mais útil para o usuário final.
+Foi tranquilo porque já tinha feito algo parecido quando tava começando com Python.
