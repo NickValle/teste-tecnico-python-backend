@@ -16,6 +16,12 @@ Pra ser sincera, não achei tão complicado — já tinha feito algo parecido qu
 
 - HTML + TailwindCSS (frontend com estilo retrô)
 
+<img src="https://github.com/NickValle/teste-tecnico-python-backend/blob/main/tela-principal.png?raw=true"/>
+
+<img src="https://github.com/NickValle/teste-tecnico-python-backend/blob/main/tela-registro.png?raw=true"/>
+
+<img src="https://github.com/NickValle/teste-tecnico-python-backend/blob/main/tela-diagnostico.png?raw=true"/>
+
 ## 🚀 Como rodar
 Clona o repositório:
 ```
