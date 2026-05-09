@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API - FOCO E PRODUTIVIDADE</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#FFB5C6] min-h-screen flex items-center justify-center">
+  <main class="w-full max-w-5xl px-6 py-8">
+    <section class="text-center mb-6">
+      <h1 class="text-5xl sm:text-6xl font-black uppercase italic tracking-tighter">Foco e Produtividade</h1>
+      <div class="text-center text-sm uppercase tracking-[0.35em] mb-6 text-black"><p>Preencha e veja o seu diagnostico de performance!</p></div>
+    </section>
+
+    <section class="flex flex-wrap justify-center gap-3 mb-4">
+      <div class="min-w-[160px] flex-1 bg-white border-4 border-black rounded-2xl px-4 py-3 text-center shadow-sm">
+        <label for="nivel_foco" class="block text-[11px] font-black uppercase tracking-[0.35em] mb-2">Nível de foco</label>
+        <input id="nivel_foco" type="number" min="1" max="5" placeholder="1 a 5"
+          class="w-full bg-transparent text-black font-black text-base text-center outline-none" />
+      </div>
+
+      <div class="min-w-[160px] flex-1 bg-white border-4 border-black rounded-2xl px-4 py-3 text-center shadow-sm">
+        <label for="tempo_minutos" class="block text-[11px] font-black uppercase tracking-[0.35em] mb-2">Tempo</label>
+        <input id="tempo_minutos" type="number" min="1" placeholder="minutos"
+          class="w-full bg-transparent text-black font-black text-base text-center outline-none" />
+      </div>
+
+      <div class="min-w-[160px] flex-1 bg-white border-4 border-black rounded-2xl px-4 py-3 text-center shadow-sm">
+        <label for="comentario" class="block text-[11px] font-black uppercase tracking-[0.35em] mb-2">Comentário</label>
+        <input id="comentario" type="text" placeholder="ex: sessão produtiva"
+          class="w-full bg-transparent text-black font-black text-base text-center outline-none" />
+      </div>
+
+      <div class="min-w-[160px] flex-1 bg-white border-4 border-black rounded-2xl px-4 py-3 text-center shadow-sm">
+        <label for="categoria" class="block text-[11px] font-black uppercase tracking-[0.35em] mb-2">Categoria</label>
+        <select id="categoria" class="w-full bg-transparent text-black font-black text-base text-center outline-none">
+          <option value="">Selecionar</option>
+          <option value="trabalho">Trabalho</option>
+          <option value="estudo">Estudo</option>
+          <option value="saude">Saúde</option>
+          <option value="pessoal">Pessoal</option>
+        </select>
+      </div>
+
+      <div class="min-w-[160px] flex-1 bg-white border-4 border-black rounded-2xl px-4 py-3 text-center shadow-sm">
+        <label for="tags" class="block text-[11px] font-black uppercase tracking-[0.35em] mb-2">Tags</label>
+        <input id="tags" type="text" placeholder="separe por vírgula"
+          class="w-full bg-transparent text-black font-black text-base text-center outline-none" />
+      </div>
+    </section>
+
+    <div id="statusText" class="text-center text-sm uppercase tracking-[0.35em] mb-6 text-black"><p>Preencha e veja o seu diagnostico de foco e produtividade!</p></div>
+
+    <section class="relative mx-auto max-w-3xl">
+      <div class="absolute top-3 left-3 w-full h-64 bg-black"></div>
+      <div class="relative bg-white border-4 border-black p-10 h-64 flex flex-col justify-center items-center text-center shadow-xl">
+        <p id="instructionText" class="text-[11px] uppercase tracking-[0.5em] text-gray-500 mb-4">Aperte em registrar para guardar e calcular as suas informacoes. <br> em seguida aperte em diagnostico para ver o seu resultado</p>
+        <div id="cardContent" class="text-xl sm:text-2xl font-black leading-relaxed">
+        </div>
+      </div>
+    </section>
+
+    <section class="flex justify-center items-center gap-4 mt-8">
+      <button id="btnRegistrar" type="button"
+        class="w-full max-w-[180px] bg-white text-black font-black uppercase tracking-[0.2em] py-4 border-4 border-black rounded-2xl hover:bg-pink-500 transition">
+        registrar
+      </button>
+      <button id="btnDiagnostico" type="button"
+        class="w-full max-w-[180px] bg-black text-white font-black uppercase tracking-[0.2em] py-4 border-4 border-black rounded-2xl hover:bg-pink-500 transition">
+        diagnóstico
+      </button>
+    </section>
+
+    <section class="text-center mt-6">
+      <button id="btnRegistrarDeNovo" type="button"
+        class="text-xs uppercase tracking-[0.5em] font-black text-black border-b-2 border-black pb-1 cursor-pointer hover:text-pink-500 hover:border-pink-500 transition">
+        registrar de novo
+      </button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
